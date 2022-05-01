@@ -1,25 +1,25 @@
 import React, {Component} from "react";
-
 import Lista from './Lista';
-//import Treyo from './Treyo';
 
 class Board extends Component {
     constructor(props){
         super(props);
         this.idlistselect=this.idlistsel.bind(this);
+        this.deltask=this.deltasken.bind(this);
     }
     
     idlistsel(e){
-        console.log("hastaBroad....."+e);
         this.props.OnClickidlistasel(e);
-        //hasta aui bien
     }
 
+    deltasken(e){
+        this.props.OnClickDelTask(e);
+    }
 
     render(){ 
 
         const listaslist= this.props.listalist.map((lista)=>
-        <Lista onClickbtn={this.idlistselect} nombrelista={lista.title} idlista={lista.id} tareas={this.props.listatask.filter(word=>word.listaid===lista.id)}/>
+        <Lista onClickbtn={this.idlistselect} nombrelista={lista.title} idlista={lista.id} tareas={this.props.listatask.filter(word=>word.listaid===lista.id)} onClickDeltask={this.deltask}/>
         );
 
         return(      
