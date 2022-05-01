@@ -8,7 +8,7 @@ import 'bootstrap/dist/js/bootstrap.js';
 
 import Treyo from './componentes/Treyo';
 
-import db from '../src/dbtask.js';
+//import db from '../src/dbtask.js';
 
 
 function App() {
